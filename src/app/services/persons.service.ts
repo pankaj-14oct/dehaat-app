@@ -46,6 +46,13 @@ export class PersonsService {
   
   personClicked(person) {
     this.shareDataSubject.next(person);
+    this.setPersonToLocalStorate(person)
+  }
+  setPersonToLocalStorate(p){
+      localStorage.setItem('selectedPerson', JSON.stringify(p))
+  }
+  getPersonFromLocalStorate(){
+    return localStorage.getItem('selectedPerson')
   }
   
 

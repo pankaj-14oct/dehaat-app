@@ -17,7 +17,9 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col" (click)="sort('name')" class="sort">Name</th>
+                    <th scope="col" (click)="sort('name')" class="sort">Name
+                        <span [ngClass]="direction == 1? 'glyphicon-arrow-down':'glyphicon-arrow-up'" class="glyphicon" aria-hidden="true"></span>
+                    </th>
                     <th scope="col">Mobile</th>
                   </tr>
                 </thead>

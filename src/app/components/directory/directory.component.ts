@@ -22,9 +22,6 @@ export class DirectoryComponent implements OnInit {
   }
 
   sort(property){
-   // this.persons.sort()
-  //  this.isDesc = !this.isDesc; //change the direction    
-  //   this.direction = this.isDesc ? 1 : -1;
     this.isDesc = !this.isDesc; //change the direction    
     this.column = property;
     this.direction = this.isDesc ? 1 : -1;
@@ -33,5 +30,6 @@ export class DirectoryComponent implements OnInit {
 
   onSelectPerson(p){
     this._person.personClicked(p)
+    
   }
 }
