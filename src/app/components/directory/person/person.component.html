@@ -1,0 +1,21 @@
+<h3 *ngIf="!isUserSelected">No Person Selected</h3>
+<div class="person" *ngIf="isUserSelected && !isEdit">
+  <h3>{{person.name}}</h3>
+  <button class="btn- btn-primary editBtn" (click)="onEditClick()">Edit</button>
+  <p><span>Age:</span>{{person.age}}</p>
+  <p><span>Mobile No:</span>{{person.mobile}}</p>
+  <p><span>Address:</span>{{person.address}}</p>
+</div>
+
+<div class="person" *ngIf="isEdit ">
+    <div class="form-group">
+        <label for="name">Contact Name</label>
+        <input type="text" class="form-control" id="name" #name [value]="person.name">
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="text" class="form-control" id="mobile" #mobile [value]="person.mobile">
+      </div>
+    <button class="btn- btn-primary editBtn" (click)="onSaveClick()">Save</button>
+  </div>
+  
