@@ -14,6 +14,8 @@ export class DirectoryComponent implements OnInit {
   persons = []
   selectedPerson:object;
   direction: number;
+  isDesc: boolean = false;
+  column: string = 'name';
   ngOnInit() {
     this.persons = this._person.getPersons();
     this.selectedPerson  = this.persons[0];
@@ -23,6 +25,9 @@ export class DirectoryComponent implements OnInit {
    // this.persons.sort()
   //  this.isDesc = !this.isDesc; //change the direction    
   //   this.direction = this.isDesc ? 1 : -1;
+    this.isDesc = !this.isDesc; //change the direction    
+    this.column = property;
+    this.direction = this.isDesc ? 1 : -1;
   }
 
 

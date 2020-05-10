@@ -22,7 +22,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let person of persons | filter: searchName : searchMobile">
+                  <tr *ngFor="let person of persons | filter: searchName : searchMobile | orderBy: {property: column, direction: direction}">
                     <th scope="row">{{person.id}}</th>
                     <td class="sort" (click)="onSelectPerson(person)"> {{person.name}}</td>
                     <td> {{person.mobile}}</td>
