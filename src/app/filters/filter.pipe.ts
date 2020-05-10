@@ -5,10 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  // transform(value: any, args?: any): any {
-  //   return null;
-  // }
-
   transform(persons: any, searchText: any, searchMobile: any): any {
     if(searchText == null &&  searchMobile == null) return persons;
     if(searchText && searchMobile){

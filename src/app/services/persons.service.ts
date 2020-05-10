@@ -32,10 +32,20 @@ export class PersonsService {
     { id:20, name: 'Dependra Kumar', mobile:888888838 , age: 30, address:' H-123, Delhi, 122001' }
   ];
 
+
+  /*
+    getPersons Function
+    returing all persons data
+  */
   getPersons(){
     return this.persons;
   }
-
+  
+  /*
+    updatePerson Function
+    Updating Contact Details here with 
+    person id and data.name , data.mobile
+  */
   updatePerson(id, data){
     const personIndex = this.persons.findIndex((per)=> per.id === id);
     const updatedPerson = this.persons[personIndex];
@@ -44,6 +54,12 @@ export class PersonsService {
     this.persons[personIndex]  = updatedPerson;
   }
   
+
+  /*
+    personClicked Function
+    notifiting here to all subcription components
+  */
+ 
   personClicked(person) {
     this.shareDataSubject.next(person);
     this.setPersonToLocalStorate(person)

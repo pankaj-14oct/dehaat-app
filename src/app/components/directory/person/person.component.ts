@@ -34,6 +34,11 @@ export class PersonComponent implements OnInit, OnDestroy {
   onEditClick(){
     this.isEdit = true;
   }
+
+  /*
+    handle request on person update
+    construct data for service
+  */
   onSaveClick(){
     this.isEdit = false;
     const data = { name :this.personName.nativeElement.value, mobile :this.personMobile.nativeElement.value}
